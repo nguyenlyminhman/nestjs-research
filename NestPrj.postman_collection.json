@@ -1,0 +1,197 @@
+{
+	"id": "0d935708-52b2-e082-ce9a-470247149fc5",
+	"name": "NestPrj",
+	"description": "",
+	"order": [
+		"c80b67da-989b-ea1f-6034-942275a2ef01",
+		"d79f834b-7be4-513f-a3a1-46eff41fc121",
+		"38b3983a-7cef-81a8-d2f7-9bcb004cebd4",
+		"5f248b89-8a9d-d5ec-eba7-f5efd50c64cd",
+		"3e1763b3-1f45-7a83-4760-391a7a712079",
+		"3f10efee-29bf-fdbc-0572-e04ffe1a99f9"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1623682116453,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "38b3983a-7cef-81a8-d2f7-9bcb004cebd4",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/tasks/49ed29e0-cde0-11eb-8b21-254daa07d84a",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623767036631,
+			"name": "Get Task By ID",
+			"description": "",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"responses": []
+		},
+		{
+			"id": "3e1763b3-1f45-7a83-4760-391a7a712079",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/tasks/9b625930-cead-11eb-93ec-d3e7c2b0b210/status",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623856295452,
+			"name": "Update task status",
+			"description": "",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"responses": [],
+			"rawModeData": "{\n\"status\":\"IN_GROGRESS\"\n}"
+		},
+		{
+			"id": "3f10efee-29bf-fdbc-0572-e04ffe1a99f9",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/tasks?status=OPEN&search=d",
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "OPEN",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "search",
+					"value": "d",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get task with filter",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1623856261102,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "5f248b89-8a9d-d5ec-eba7-f5efd50c64cd",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/tasks/49ed29e0-cde0-11eb-8b21-254daa07d84a",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete task",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1623767059328,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "c80b67da-989b-ea1f-6034-942275a2ef01",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/tasks?status=OPEN&search=d",
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "OPEN",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "search",
+					"value": "d",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623856299587,
+			"name": "Get all task",
+			"description": "",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"responses": []
+		},
+		{
+			"id": "d79f834b-7be4-513f-a3a1-46eff41fc121",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/tasks",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1623856297705,
+			"name": "Create a task",
+			"description": "",
+			"collectionId": "0d935708-52b2-e082-ce9a-470247149fc5",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\":\"A\",\n\t\"description\": \"B\"\n}"
+		}
+	]
+}
