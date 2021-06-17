@@ -1,0 +1,145 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NestResearch",
+		"_postman_id": "8c56dda9-61c1-7649-3ea0-b36374eb72bd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all task",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/tasks?status=OPEN&search=d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "OPEN",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "search",
+							"value": "d",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a task",
+			"request": {
+				"url": "http://localhost:3000/tasks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"A\",\n\t\"description\": \"B\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task By ID",
+			"request": {
+				"url": "http://localhost:3000/tasks/49ed29e0-cde0-11eb-8b21-254daa07d84a",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"url": "http://localhost:3000/tasks/49ed29e0-cde0-11eb-8b21-254daa07d84a",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update task status",
+			"request": {
+				"url": "http://localhost:3000/tasks/9b625930-cead-11eb-93ec-d3e7c2b0b210/status",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"status\":\"IN_GROGRESS\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get task with filter",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/tasks?status=OPEN&search=d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "OPEN",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "search",
+							"value": "d",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
