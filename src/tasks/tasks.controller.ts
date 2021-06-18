@@ -3,7 +3,8 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateTaskDTO } from './dto/create-task.dto';
 import { FilterTaskDTO } from './dto/filter-task.dto';
 import { TaskStatusValidationPipe } from './pipes/task-status-validation.pipe';
-import { Task, TasksStatus } from './tasks.model';
+import { TasksStatus } from './task-status.enum';
+import { Task } from './tasks.model';
 import { TasksService } from './tasks.service';
 
 @Controller('tasks')
