@@ -15,8 +15,7 @@ export class TaskRepository extends Repository<TaskEntity>{
         if (search) {
             query.andWhere('(task.title like :search or task.description like :search)', { search: `%${search}%` })
         }
-        console.log(query);
-        
+        console.info(query.getSql()); // sprint sql
         let rs = query.getMany();
         return rs;
     }
