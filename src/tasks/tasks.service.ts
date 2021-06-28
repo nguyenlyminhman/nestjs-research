@@ -5,6 +5,7 @@ import { TasksStatus } from "./task-status.enum";
 import { TaskRepository } from './task.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TaskEntity } from './task.entity';
+import { User } from 'src/auth/user.entity';
 
 
 @Injectable()
@@ -45,14 +46,16 @@ export class TasksService {
     }
 
 
-    async creatTask(createTaskDTO: CreateTaskDTO): Promise<TaskEntity> {
+    async creatTask(createTaskDTO: CreateTaskDTO, user: User): Promise<TaskEntity> {
         const { title, description } = createTaskDTO;
         const task = new TaskEntity();
 
         task.title = title
         task.description = description;
+        task.user = user;
         task.status = TasksStatus.OPEN;
         await task.save();
+        delete task.user;
         return task;
     }
 }
