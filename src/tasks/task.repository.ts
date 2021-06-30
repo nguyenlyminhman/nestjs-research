@@ -1,12 +1,18 @@
+import { User } from "src/auth/user.entity";
 import { EntityRepository, Repository } from "typeorm";
 import { FilterTaskDTO } from "./dto/filter-task.dto";
 import { TaskEntity } from "./task.entity";
 
 @EntityRepository(TaskEntity)
 export class TaskRepository extends Repository<TaskEntity>{
-    getTasks(filterDTO: FilterTaskDTO): Promise<TaskEntity[]> {
+    getTasks(
+        filterDTO: FilterTaskDTO,
+        user: User
+    ): Promise<TaskEntity[]> {
         const { status, search } = filterDTO;
         let query = this.createQueryBuilder('task');
+
+        query.where('task.userId = :userId', {userId: user.id});
 
         if (status) {
             query.andWhere('task.status = :status', { status })
